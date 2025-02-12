@@ -1,3 +1,4 @@
-import { loadHeaderFooter } from "./utils.mjs";
+import { createLastMondificationAndCurrentYear, lastVisistedDisplay } from "./utils.mjs";
 
-loadHeaderFooter();
+createLastMondificationAndCurrentYear();
+lastVisistedDisplay()

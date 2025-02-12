@@ -1,0 +1,124 @@
+{
+    "courses" : [
+        {
+            "subject": "MTH",
+            "number": 101,
+            "title": "Mathematics",
+            "credits": 3,
+            "type" : "Compulsory",
+            "description": "This course will introduce students to indices, logarithm and trigonometry"
+        },
+        {
+            "subject": "MTH",
+            "number": 102,
+            "title": "Mathematics",
+            "credits": 3,
+            "type" : "Compulsory",
+            "description": "This course will introduce students to functions, matrix, calculus and complex numbers"
+        },
+        {
+            "subject": "MTH",
+            "number": 103,
+            "title": "Mathematics",
+            "credits": 3,
+            "type" : "Compulsory",
+            "description": "This course will introduce students to algebra and trigonometry"
+        },
+        {
+            "subject": "ENG",
+            "number": 201,
+            "title": "English Language",
+            "credits": 3,
+            "type" : "Compulsory",
+            "description": "This course introduces students to essay writing, grammar, lexis and pronunciation."
+        },
+        {
+            "subject": "PHY",
+            "number": 401,
+            "title": "Physics",
+            "credits": 3,
+            "type" : "Science",
+            "description": "This course introduces students to the laws of nature and its application"
+        },
+        {
+            "subject": "HIS",
+            "number": 301,
+            "title": "History",
+            "credits": 2,
+            "type" : "Art",
+            "description": "This course will focus on local and international history"
+        },
+        {
+            "subject": "CMM",
+            "number": 501,
+            "title": "Commerce",
+            "credits": 3,
+            "type" : "Art",
+            "description": "This course exposes students to the financial system and its principles"
+        },
+        {
+            "subject": "CHM",
+            "number": 601,
+            "title": "Chemistry",
+            "credits": 3,
+            "type" : "Science",
+            "description": "This course introduces students to properties and effects of elements and their manipulation."
+        },
+        {
+            "subject": "BUS",
+            "number": 801,
+            "title": "Business Studies",
+            "credits": 3,
+            "type" : "Art",
+            "description": "This course deals with the various aspects of business management, such as finance, marketing, human resources and production."
+        },
+        {
+            "subject": "BIO",
+            "number": 901,
+            "title": "Biology",
+            "credits": 3,
+            "type" : "Science",
+            "description": "Biology is a natural science discipline that studies living things."
+        },
+        {
+            "subject": "FMH",
+            "number": 1001,
+            "title": "Further Mathematics",
+            "credits": 3,
+            "type" : "Science",
+            "description": "This course dives deeper into some mathematical applications in life."
+        },
+        {
+            "subject": "GOV",
+            "number": 1101,
+            "title": "Government",
+            "credits": 2,
+            "type" : "Science",
+            "description": "This course introduces students to institutions and how they are run."
+        },
+        {
+            "subject": "REL",
+            "number": 1201,
+            "title": "Religious Studies",
+            "credits": 2,
+            "type" : "Art",
+            "description": "This course exposes students to spiritual foundations and beliefs."
+        },
+        {
+            "subject": "CED",
+            "number": 1301,
+            "title": "Civic Education",
+            "credits": 2,
+            "type" : "Art",
+            "description": "Civic Education provides information and learning experiences to equip and empower students to participate in democratic processes."
+        },
+        {
+            "subject": "AGS",
+            "number": 701,
+            "title": "Agricultural Science",
+            "credits": 2,
+            "type" : "Compulsory",
+            "description": "This course exposes students to the world of farming including livestock, crop farming, mechanization as well as guding principles"
+        }
+    ]
+}

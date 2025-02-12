@@ -15,14 +15,15 @@ function renderWithTemplate(template, parentElement, position = "afterbegin") {
     const header = document.querySelector(".main-header");
     const footer = document.querySelector(".main-footer");
   
-    const footerPath = "public/footer.html";
-    const headerPath = "public/header.html";
+    const footerPath = "../public/footer.html";
+    const headerPath = "../public/header.html";
   
     const footerTemplate = await loadTemplate(footerPath);
     const headerTemplate = await loadTemplate(headerPath);
   
     renderWithTemplate(headerTemplate, header);
     renderWithTemplate(footerTemplate, footer);
+    createLastMondificationAndCurrentYear();
   }
   
   //fetches the path to the header/footer html and returns it in text
@@ -31,4 +32,52 @@ function renderWithTemplate(template, parentElement, position = "afterbegin") {
     const html = await response.text();
     return html;
   }
+
+
+  //function to display last modification date
+  //and current year
+export function createLastMondificationAndCurrentYear() {
+    //grabs the currentyear id
+    const currentyear = document.querySelector("#currentyear");
+
+    //grabs the lastModified id
+    const last = document.getElementById("lastModified");
+
+    //creates a new date object
+    const today = new Date();
+
+    //display last modified
+    last.innerHTML = `<span class="last">Last Modification: ${document.lastModified}</span>`;
+
+    //display the current year
+    currentyear.innerHTML = today.getFullYear();
+}
+
+
+
+
+export function lastVisistedDisplay() {
+    const lastVisited = document.querySelector(".last-visited");
+    const minute = 1000 * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+    const year = day * 365;
+    const today = new Date();
+    if (localStorage.getItem("visitDate") == null) {
+        lastVisited.textContent = "Welcome, let us know if you have any questions."
+        localStorage.setItem("visitDate", today.getTime());
+    }
+    else {
+        const lastVisitTime = localStorage.getItem("visitDate");
+        let diff = today.getTime() - lastVisitTime
+        diff = diff/day;
+        if (diff <= 24) {
+            lastVisited.innerHTML = "Back so Soon! <br> Awesome!"
+        }
+        else {
+            lastVisited.textContent = `You Last vsisted ${Math.round(diff)}`
+        };
+        
+    };
+};
   
