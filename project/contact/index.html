@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMS-Contact US</title>
+    <meta name="author" content="Maxwell Balla Nvani">
+    <meta name="description" content="This site aims to provide information about BMS online Institute, how to enrol as well as as contact address">
+    <link rel="stylesheet" href="../styles/bms.css">
+    <script src="scripts/contact.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body class="content">
+  <header class="main-header"></header>
+  <main>
+      <div class="contact-welcome">
+          <picture>
+            <source media="(min-width: 1000px)" srcset="../images/contactus_large.webp">
+            <source media="(min-width: 500px)" srcset="../images/contactus_medium.webp">
+            <img
+              class="contact-img"
+              src="../images/contactus_small.webp"
+              alt="search picture"
+              loading="lazy"
+              width="400"
+              height="200"
+            >
+          </picture>
+          
+          <h1 class="contact-msg">CONTACT US TODAY</h1>
+      </div>
+      <hr>
+      <div class="contact-msg-two">
+        <p class="about-para">
+          You can reach us via any of the following means:
+        </p>
+        <h2>Email: bmsonlineinstitute&commat;gmail&period;com</h2>
+        <h2>Phone Number: 07064852404, 08110895912, 09162296367</h2>
+      </div>
+      <div class="contact-details">
+        <form action="enquiry.html" method="get">
+          <p>All required (*) fields must be filled</p>
+          <label class="name">
+            First Name <span class="required">*</span>
+            <input type="text" name="fname" id="fname" placeholder="John" autocomplete="on" required>
+          </label>
+          <label class="name">
+            Last Name <span class="required">*</span>
+            <input type="text" name="lname" id="lname" placeholder="Doe" autocomplete="on" required>
+          </label>
+          <label class="email">
+            Email address <span class="required">*</span>
+            <input type="text" name="email" id="email" placeholder="johndoe@example.com" autocomplete="on" required>
+          </label>
+          <label class="phone">
+            Phone Number <span class="required">*</span>
+            <input type="tel" name="phone" id="phone" placeholder="+2347000608000" autocomplete="on" required>
+          </label>
+          <div>Gender
+          <label class="gender">
+            <input type="radio" name="gender" id="gender" value="1"> Male
+          </label>
+          <label class="gender">
+            <input type="radio" name="gender" id="gender1" value="2"> Female
+          </label>
+          <div class="nationality">Nationality <span class="required">*</span></div>
+          <label class="country">
+              <input type="radio" name="country" id="nat" value="1" required autocomplete="on"> Nigerian
+          </label>
+          <label class="country">
+              <input type="radio" name="country" id="nat2" value="2" required autocomplete="on"> Non-Nigerian
+          </label>
+          <label class="select">
+              State of Origin
+              <select name="state" id="state">
+                  <option value="" disabled selected>Please select your state</option>
+              </select>
+          </label>
+          <label class="birthDate">
+              Date of Birth <span class="required">*</span>
+              <input type="date" name="birthDate" id="birthDate" required>
+          </label>
+          <div class="enquiryy">What would you like to enquire about?<br><i>(Check all that apllies)</i></div>
+          <label class="check">
+            <input type="checkbox" name="enrol" id="enrol" value="1">Enrollment
+          </label>
+          <label class="check">
+              <input type="checkbox" name="fees" id="fees" value="2">Fees
+          </label>
+          <label class="check">
+              <input type="checkbox" name="duration" id="duration" value="3">Duration
+          </label>
+          <label class="check">
+              <input type="checkbox" name="courses" id="courses" value="4">Courses Offered
+          </label>
+          <label class="check">
+              <input type="checkbox" name="others" id="others" value="5">Others
+          </label>
+          <div class="enquiryy">If you selected "Others" above, kindly describe what you would like to enquire about below</div>
+          <label class="written">
+              Enquiry
+              <textarea name="user_review" id="user_review" autofocus></textarea>
+          </label>
+          <input type="submit" value="Enquire">
+        </form>
+      </div>
+      <hr>
+      <div class="about-img">
+        <section class="first">
+            <figure>
+                <img src="../images/max-small.webp" alt="picture of Founder" width="200" height="200">
+                <div class="middle">
+                    <div class="text">Dr. Maxwell Nvani <br>Phone number: 07064852404 <br>Email: maxwellnvani&commat;gmail&period;com</div>
+                </div>
+                <h3>Founder of BMS Online Institute</h3>
+                <figcaption class="caption-two">Dr. Maxwell Nvani</figcaption>
+            </figure>
+        </section>
+        <section class="sec">
+            <figure>
+                <img src="../images/gloria-large.webp" alt="picture of Principal" loading="lazy" width="300" height="413">
+                <h3>Principal of BMS Online Institute</h3>
+                <p>09162296367</p>
+                <p>gloriacokpah&commat;gmail&period;com</p>
+                <figcaption class="caption-two">Dr. Gloria Okpah</figcaption>
+            </figure>
+        </section>
+        <section class="third">
+            <figure>
+                <img src="../images/gloria-large.webp" alt="picture of Principal" loading="lazy" width="300" height="413">
+                <h3>Vice Principal - Admin</h3>
+                <p>09162296367</p>
+                <p>gloriacokpah&commat;gmail&period;com</p>
+                <figcaption class="caption-two">Dr. Gloria Okpah</figcaption>
+            </figure>
+        </section>
+        <section class="fourth">
+            <figure>
+                <img src="../images/max-large.webp" alt="picture of vp academics" width="300" height="413">
+                <h3>Vice Principal - Academics</h3>
+                <p>07064852404</p>
+                <p>maxwellnvani&commat;gmail&period;com</p>
+                <figcaption class="caption-two">Dr. Maxwell Nvani</figcaption>
+            </figure>
+        </section>
+      </div>
+      <hr>
+      <p class="ending-p">
+        Feel free to call any of them for enquiries, enrolment, clarification
+        or complaints
+      </p>
+      <p class="contact-p">
+        Feel free to follow us on any of our social media handles via
+        Facebook, Instagram, LinkedIn and YouTube channel
+      </p>
+      <p class="contact-motto">
+        ...Building stronger Societies through knowledge
+      </p>
+  </main>
+</body>
+</html>
