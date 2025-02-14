@@ -76,7 +76,7 @@ export default class Mths {
             let encodedX = encodeURIComponent(x);
 
             //incorporate coverted value to the fetch path
-            const path = `http://api.mathjs.org/v4/?expr=${encodedX}`;
+            const path = `https://api.mathjs.org/v4/?expr=${encodedX}`;
 
             //fetch
             const res = await fetch(path);
