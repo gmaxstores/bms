@@ -30,7 +30,6 @@ export default class Mths {
             //this.myFunction(e);
             if (e.key === "Enter") { 
                 this.solve();
-                return false
             } 
         });
 
