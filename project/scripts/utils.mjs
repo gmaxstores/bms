@@ -75,9 +75,54 @@ export function lastVisistedDisplay() {
             lastVisited.innerHTML = "Back so Soon! <br> Awesome!"
         }
         else {
-            lastVisited.textContent = `You Last vsisted ${Math.round(diff)}`
+            lastVisited.textContent = `You Last vsisted ${Math.round(diff)} hours ago`
         };
         
     };
 };
+
+
+//function to display an alert box with a message.
+export function alertMessage(message, scroll=true) {
+
+    //create a div element
+    const alert = document.createElement("div");
+
+    //give a class name - alert
+    alert.classList.add("alert");
+
+    //create a p element
+    const alertMsg = document.createElement("p");
+
+    //set the content of the p element
+    alertMsg.textContent = message
+
+    //create a close button
+    const alertButton = document.createElement("button");
+
+    //set the textcontent of the button
+    alertButton.textContent = "X"
+
+    //append the p and button element to div element
+    alert.appendChild(alertMsg);
+    alert.appendChild(alertButton);
+
+    //set the class name for the close btn
+    alertButton.classList.add("alert-button");
+
+    //remove the alert box when the close btn is clicked
+    alert.addEventListener("click", (e) => {
+      if (e.target.tagName) {
+        const main = document.querySelector("main")
+        main.removeChild(alert);
+      }
+    });
+
+    //display the alert box and take user to the alert box
+    const main = document.querySelector("main");
+    main.prepend(alert);
+    if (scroll) {
+      window.scrollTo(0,0);
+    }
+  }
   

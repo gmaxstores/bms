@@ -33,12 +33,14 @@ function createCourseCards(coursesD) {
     container.innerHTML = "";
     coursesD.forEach(course => {
         let card = document.createElement("section");
+        card.classList.add("section-dialog");
         let msg = document.createElement("h3");
         let button = document.createElement("button");
         button.classList.add("open-btn");
         let dialog = document.createElement("dialog");
         dialog.classList.add("dialog-box");
         let closeButton = document.createElement("button");
+        closeButton.classList.add("dialog-close-btn");
         let dialogPar = document.createElement("p");
         dialog.appendChild(closeButton);
         dialog.appendChild(dialogPar);

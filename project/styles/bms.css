@@ -19,13 +19,13 @@ body {
 }
 
 /*Styled the homepage*/
-.main-footer {
+.footer-div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 2px solid var(--hover-color);
     border-radius: 10px;
     padding: 1rem;
-    margin: 0 1rem 0 1rem;
+    margin: 1rem 1rem 0 1rem;
 }
 .social {
     display: flex;
@@ -34,6 +34,13 @@ body {
 }
 .non-social {
     text-align: center;
+}
+.non-social p a {
+  text-decoration: none;
+  color: var(--hover-color);
+}
+.non-social p a:hover {
+  color: var(--main-text-color);
 }
 .nav-bar-container {
     display: grid;
@@ -433,9 +440,124 @@ hr {
     border-color: var(--hover-color);
   }
 
+  /*Added styles for the courses section in about page*/
+  .courses {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .courses-section {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .section-dialog {
+    padding: 1rem;
+    text-align: center;
+  }
+  .open-btn {
+    padding: 0.5rem;
+    border: 2px solid var(--main-text-color);
+  }
+  .open-btn:hover {
+    background-color: var(--hover-bg-color);
+    color: var(--hover-color);
+  }
+  .dialog-box {
+    padding: 1rem;
+    max-width: 350px;
+    background-color: var(--main-text-color);
+    color: var(--hover-bg-color);
+    margin: 0 auto;
+    top: 9rem;
+  }
+  .course-span {
+    color: var(--hover-color);
+  }
+  .dialog-close-btn {
+    padding: 0.5rem;
+  }
+  .dialog-close-btn:hover {
+    background-color: var(--hover-bg-color);
+    color: var(--hover-color);
+  }
+
+  .first-row {
+    max-width: 200px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .first-row li button {
+    padding: 3rem;
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  /*added styles to the maths calculator*/
+  table { 
+    border: 2px solid var(--hover-color); 
+    margin:  0 auto; 
+    padding: 1rem;
+    margin-bottom: 10rem;
+    border-radius: 1rem;
+} 
+.maths-div {
+  position: relative;
+  top: 8rem;
+}
+table input[type="button"] { 
+  width: 100%; 
+  padding: 20px 40px; 
+  background-color: var(--main-text-color); 
+  color: white; 
+  font-size: 24px; 
+  font-weight: bold; 
+  border: none; 
+  border-radius: 5px; 
+} 
+table input[type="button"]:hover {
+  background-color: var(--hover-bg-color);
+}
+
+table input[type="text"] { 
+  padding: 20px 30px; 
+  font-size: 24px; 
+  font-weight: bold; 
+  border: none; 
+  border-radius: 5px; 
+  border: 2px solid black; 
+}
+
+/*Added styles to error alert pop up*/
+.alert {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+.alert p,
+.alert button {
+  background-color: var(--hover-color);
+  color: black;
+  width: 10%;
+}
+.alert p {
+  padding: 0.8rem;
+  width: 100%;
+}
+.alert button:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-color);
+}
+
+
   @keyframes lastVisited-animation {
     0% {
-      transform: translateX(-700px);
+      transform: translateX(-350px);
     }
     20% {
       background-color: var(--hover-color);
@@ -452,7 +574,7 @@ hr {
       background-color: var(--hover-color);
     }
     100% {
-      transform: translateX(700px);
+      transform: translateX(350px);
     }
   }
   .last-visited {
