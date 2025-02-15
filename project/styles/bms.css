@@ -553,6 +553,107 @@ table input[type="text"] {
   background-color: var(--hover-bg-color);
   color: var(--hover-color);
 }
+/*Added styles to bmi calculator page*/
+.bmi-div-container {
+  max-width: 700px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 3rem;
+  margin-top: 1rem;
+  background-color: var(--main-text-color);
+  border: 2px solid var(--hover-bg-color);
+  border-radius: 2rem;
+}
+.bmi-start-button, .bmi-track-button {
+  padding: 3rem;
+  border: 2px solid var(--hover-bg-color);
+  border-radius: 2rem;
+  font-size: 3rem;
+}
+.bmi-start-button:hover, .bmi-track-button:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-color);
+}
+.dialog-box-one, .dialog-box-two, .dialog-box-three, .dialog-box-four {
+  position: absolute;
+  top: 13rem;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--main-text-color);
+  color: var(--hover-bg-color);
+  border-radius: 1rem;
+}
+.dialog-record-box {
+  position: absolute;
+  top: 13rem;
+  width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--main-text-color);
+  color: var(--hover-bg-color);
+  border-radius: 1rem;
+}
+.dialog-box-one::backdrop, .dialog-box-two::backdrop, .dialog-box-three::backdrop, .dialog-box-four::backdrop, .dialog-record-box::backdrop {
+  background-image: linear-gradient(var(--main-bg-color), var(--hover-bg-color));
+  opacity: 0.75;
+  
+}
+.dialog-close-button {
+  padding: 1rem;
+  max-width: fit-content;
+  border-radius: 1rem;
+  border: 2px solid var(--hover-bg-color);
+}
+.dialog-close-button:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-color);
+}
+.dialog-input-one, .dialog-input-two, .dialog-input-three {
+  display: block;
+  width: 99%;
+  font-size: 40px;
+  border-radius: 1rem;
+  border: 2px solid var(--hover-bg-color);
+}
+.question-one, .question-two, .question-three {
+  font-size: 40px;
+}
+.next-one, .next-two, .next-three {
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 20px;
+  border-radius: 1rem;
+  border: 2px solid var(--hover-bg-color);
+}
+.next-one:hover, .next-two:hover, .next-three:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-color);
+}
+.height-par, .details-par, .name-par, .interpretation-par {
+  font-size: 40px;
+}
+.bmi-value {
+  color: var(--hover-color);
+}
+.bmi-instruction-p {
+  text-align: center;
+}
+.record-li {
+  list-style: upper-roman;
+  margin: 1rem;
+  border:  2px solid var(--hover-color);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.record-span-height, .record-span-weight, .record-span-name, .record-span-bmivalue, .record-span-date {
+  color: var(--hover-color);
+}
+.empty-record-par {
+  text-align: center;
+}
 
 
   @keyframes lastVisited-animation {
