@@ -1,10 +1,6 @@
-import { setLocalStorage, getLocalStorage } from "./utils.mjs";
+import { setLocalStorage, getLocalStorage, createElement } from "./utils.mjs";
 
-function createElement(element, className) {
-    const createdElement = document.createElement(element);
-    createdElement.classList.add(className);
-    return createdElement;
-}
+
 
 export default class bmiCalculator {
     constructor(parentElement) {

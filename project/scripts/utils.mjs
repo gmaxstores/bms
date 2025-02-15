@@ -1,4 +1,12 @@
 
+//conerts response to json
+export function convertToJson(res) {
+    if (res.ok) {
+    return res.JSON();
+    } else {
+    throw {name: "servicesError", message: res.JSON()};
+    }
+}
 
 
 //inserts the header and footer html respectively
@@ -135,3 +143,9 @@ export function alertMessage(message, scroll=true) {
     localStorage.setItem(key, JSON.stringify(data));
   }
   
+  //creates an element with a class name
+  export function createElement(element, className) {
+    const createdElement = document.createElement(element);
+    createdElement.classList.add(className);
+    return createdElement;
+}
