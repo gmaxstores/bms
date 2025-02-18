@@ -8,7 +8,13 @@ const divContainer = document.querySelector(".news-search-container");
 const newsUl = createElement("ul", "news-ul");
 divContainer.appendChild(newsUl);
 
-const path = "https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=3221dc829a4844d79512864a08aa28dc";
+const options = {
+    method: "GET",
+    headers: {
+      "X-Api-Key": "3221dc829a4844d79512864a08aa28dc"
+    }
+}
+const path = "https://newsapi.org/v2/top-headlines?sources=cnn";
 
 
 //function to dynamically create a list of news
@@ -43,7 +49,7 @@ function displayNews (res, ul) {
 //function to fetch news and call displaynews function
 async function getNews() {
     try {
-        const response = await fetch(path);
+        const response = await fetch(path, options);
         const newsResponse = await convertToJson(response);
         displayNews(newsResponse, newsUl);
     } catch (error) {
