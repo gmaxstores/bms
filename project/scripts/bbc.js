@@ -8,18 +8,13 @@ const divContainer = document.querySelector(".news-search-container");
 const newsUl = createElement("ul", "news-ul");
 divContainer.appendChild(newsUl);
 
-const options = {
-    method: "GET",
-    headers: {
-      "X-Api-Key": "3221dc829a4844d79512864a08aa28dc"
-    }
-}
-const path = "https://newsapi.org/v2/top-headlines?sources=bbc-news";
+
+const path = "https://api.mediastack.com/v1/news?access_key=f5149708a0d4d5d742476e496dffa9cd&sources=en,-de&sources=bbc,-cnn";
 
 //function to dynamically create and display list of news
 function displayNews (res, ul) {
     
-    res.articles.forEach(element => {
+    res.data.forEach(element => {
         const date = createElement("p", "news-date");
         const author = createElement("p", "news-author");
         const newsArticle = createElement("p", "news-article");
@@ -27,8 +22,8 @@ function displayNews (res, ul) {
         const desc = createElement("p", "news-desc");
         const newsLink = createElement("a", "news-link");
         const newsList = createElement("li", "news-list");
-        date.textContent = `${element.publishedAt}`;
-        author.textContent = `${element.author}`;
+        date.textContent = `${element.published_at}`;
+        author.textContent = `By ${element.author}`;
         newsArticle.textContent = `${element.content}`;
         title.textContent = `${element.title}`;
         desc.textContent = `${element.description}`;
@@ -47,7 +42,7 @@ function displayNews (res, ul) {
 //function to fetch bbc news
 async function getNews() {
     try {
-        const response = await fetch(path, options);
+        const response = await fetch(path);
         const newsResponse = await convertToJson(response);
         displayNews(newsResponse, newsUl);
     } catch (error) {

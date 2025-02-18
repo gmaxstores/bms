@@ -8,12 +8,6 @@ const divContainer = document.querySelector(".news-search-container");
 const newsUl = createElement("ul", "news-ul");
 divContainer.appendChild(newsUl);
 
-const options = {
-    method: "GET",
-    headers: {
-      "access_key": "f5149708a0d4d5d742476e496dffa9cd"
-    }
-}
 const path = "https://api.mediastack.com/v1/news?access_key=f5149708a0d4d5d742476e496dffa9cd&sources=en,-de&sources=cnn,-bbc";
 
 
@@ -29,7 +23,7 @@ function displayNews (res, ul) {
         const newsLink = createElement("a", "news-link");
         const newsList = createElement("li", "news-list");
         date.textContent = `${element.published_at}`;
-        author.textContent = `${element.author}`;
+        author.textContent = `By ${element.author}`;
         newsArticle.textContent = `${element.content}`;
         title.textContent = `${element.title}`;
         desc.textContent = `${element.description}`;
