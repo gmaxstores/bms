@@ -54,7 +54,7 @@ async function getNews() {
         const err = await error.message;
 
         //print the error to console screen
-        console.log(`${error.name}: ${err.message}`);
+        console.log(`${error.name}: ${err}`);
 
         //inform user of the error
         alertMessage(`${error.name}: ${err}`);

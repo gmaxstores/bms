@@ -10,9 +10,12 @@ divContainer.appendChild(newsUl);
 
 const options = {
     method: "GET",
+    mode: 'cors',
     headers: {
-      "X-Api-Key": "3221dc829a4844d79512864a08aa28dc"
-    }
+      "X-Api-Key": "3221dc829a4844d79512864a08aa28dc",
+      'Access-Control-Allow-Origin': '*' 
+    },
+    
 }
 const path = "https://newsapi.org/v2/top-headlines?sources=cnn";
 
