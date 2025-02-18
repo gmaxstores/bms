@@ -369,7 +369,14 @@ textarea {
   form p {
     font-weight: bolder;
   }
-  
+  form input:invalid {
+    border-width: 2px;
+    border-color: red;
+  }
+  form input:valid {
+    border-width: 2px;
+    border-color: green;
+  }
   input[type="checkbox"] {
     margin-right: 1rem;
     height: 20px;
