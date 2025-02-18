@@ -1,23 +1,37 @@
-import { convertToJson, createElement } from "./utils.mjs";
+import { convertToJson, createElement, alertMessage } from "./utils.mjs";
 
-const path = "https://favqs.com/api/qotd";
-
+const path = "https://api.api-ninjas.com/v1/quotes";
+;
 export default class Quote {
     constructor(parentElement) {
         this.parentElement = parentElement;
     }
+
+    //displays the data
+    displayQuote(data) {
+        const quotePar = createElement("p", "quote-par");
+        quotePar.textContent = `${data[0].quote}`;
+        this.parentElement.appendChild(quotePar);
+    }
+
+    //fetches the quote of the day
     async getQuote() {
         try {
             const options = {
                 method: "GET",
                 headers: {
-                  "Content-Type": "application/json",
-                  "Authorization": "Token token='086911d0ec39af6bb5fd5f0def4ab2ac'",
-                }
-              };
-            const response = await fetch(path, options);
-            const quoteData = convertToJson(response);
-            displayQuote(quoteData);
+                  'X-Api-Key': "BiZ0CVqHClV9k1T581dwGA==sQnugtyT4g3b94f9",
+                  
+                },
+            };
+            const response = await fetch(path, options)
+            const quoteData = await convertToJson(response);
+            const quotePar = createElement("p", "quote-par");
+            quotePar.textContent = `${quoteData[0].quote}`;
+            const quoteAuthor = createElement("p", "quote-author");
+            quoteAuthor.textContent = `By ${quoteData[0].author}`;
+            this.parentElement.appendChild(quotePar);
+            this.parentElement.appendChild(quoteAuthor);
         } catch (error) {
             //get the error msg
             const err = await error.message;
@@ -30,11 +44,7 @@ export default class Quote {
         }
     }
     
-    displayQuote(data) {
-        const quotePar = createElement("p", "quote-par");
-        quotePar.textContent = `${data.quote.body}`;
-        this.parentElement.appendChild(quotePar);
-    }
+    //function to run the class
     init() {
         this.getQuote();
     }

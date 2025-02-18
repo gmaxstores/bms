@@ -19,6 +19,10 @@ body {
 }
 
 /*Styled the homepage*/
+#menu {display: none;}
+.active {
+  text-decoration: underline;text-decoration-color: var(--comment-color);
+}
 .footer-div {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -162,9 +166,7 @@ body {
 .exchange-section p {
     text-decoration: underline 5px var(--hover-color);
 }
-aside p {
-    text-decoration: underline 5px var(--hover-color);
-}
+
 
 /*Styled the about page*/
 .about-section {
@@ -215,6 +217,9 @@ hr {
 .about-sec-p {
     text-align: justify;
     padding: 1rem;
+}
+.about-msg {
+  text-align: center;
 }
 .about-img .first img {
     opacity: 1;
@@ -268,6 +273,7 @@ hr {
     margin: 1rem;
     padding: 1rem;
     background-color: var(--hover-color);
+    font-size: 90%;
   }
 
   /*Added styles to form*/
@@ -278,59 +284,80 @@ hr {
     border-radius: 10px;
     max-width: 700px;
   }
+  form fieldset {
+    margin: 1rem;
+    border: 2px solid var(--main-text-color);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  form legend {
+    font-size: 2rem;
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    margin-left: 1rem;
+    border-radius: 1rem;
+    padding: 5px;
+  }
+  .form-heading {
+    text-align: center;
+  }
+  .required-fields {
+    color: var(--hover-color);
+  }
+  form label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  #firstname, #lastname, #email, #telephone, #birth, #gtitle, #gname, #country {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+    border-radius: 1rem;
+  }
+  .gender-ul, .interest-ul, #guardian-ul, .display-q {
+    margin-left: 1rem;
+    list-style: none;
+    line-height: 0;
+    margin-top: 2px;
+    
+  }
+  #male, #female, #join, #enquire, #resumption-one, #resumption-two, #resumption-three, #resumption-four {
+    height: 20px;
+    width: 20px;
+    
+  }
+  .nationality-ul {
+    margin-left: 1rem;
+    list-style: none;
+    line-height: 0;
+    margin-top: 2px;
+  }
+  #nigerian, #non-nigerian {
+    height: 20px;
+    width: 20px;
+  }
+  .display-state select {
+    width: 100%;
+    font-size: 30px;
+  }
+.display-state {
+  list-style: none;
+}
+#enquiry-description {
+  width: 100%;
+  height: 100px;
+}
+.textarea-desc {
+  display: block;
+}
+textarea {
+  border-radius: 1rem;
+}
+
   form p {
     font-weight: bolder;
   }
-  #fname, #lname, #email, #phone {
-    display: block;
-    width: 100%;
-    margin-bottom: 1rem;
-    font-size: 25px;
-  }
-  form .required {
-    color: var(--hover-color);
-    font-weight: bolder;
-  }
-
-  .gender, .country {
-    display: block;
-    margin-left: 1rem;
-  }
-  #gender, #gender1 {
-    height: 20px;
-    width: 20px;
-  }
-  .nationality {
-    margin-top: 1rem;
-  }
-
-  #nat, #nat2 {
-    height: 20px;
-    width: 20px;
-  }
-  .select {
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  select {
-    display: block;
-    font-size: 25px;
-    width: 50%;
-  }
-
-  #birthDate {
-    display: block;
-    font-size: 25px;
-    width: 50%;
-  }
-  .enquiryy {
-    margin: 1rem 0 0 0;
-  }
-  .check {
-    display: block;
-    margin-left: 1rem;
-  }
+  
   input[type="checkbox"] {
     margin-right: 1rem;
     height: 20px;
@@ -345,18 +372,41 @@ hr {
     width: 100%;
     padding: 1rem;
     margin-top: 1rem;
-    font-size: 20px;
+    font-size: 30px;
     border: 2px solid var(--main-text-color);
+    border-radius: 1rem;
   }
   input[type="submit"]:hover {
     background-color: var(--hover-bg-color);
     color: var(--hover-color);
   }
+
+  /*added styles to confirmation page on submission*/
+.form-result, .form-interest {
+  max-width: 700px;
+  margin: 0 auto;
+  justify-self: center;
+  margin: 1rem;
+  border: 2px solid var(--hover-color);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.form-result span {
+  color: var(--hover-color);
+}
+.form-interest p {
+  margin-bottom: 1rem;
+}
+.thankyou-heading {
+  text-align: center;
+}
+
   .ending-p, .contact-p, .contact-motto {
     padding: 1rem;
     text-align: center;
   }
 
+  /*enhanced ux by fixing header to the top*/
   header {
     position: sticky;
     top: 0;
@@ -372,38 +422,35 @@ hr {
 
   /*Added css to the interactive page*/
   .figure-icon {
-    padding: 1rem;
-    border: 2px solid var(--main-text-color);
-    border-radius: 50px;
     width: 100%;
     height: auto;
     justify-items: center;
-  }
-  .figure-icon:hover {
-    border: 2px solid var(--hover-color);
   }
   .icon-link {
     display: block;
     max-width: fit-content;
   }
   .category-container {
-    max-width: 750px;
-    margin: 0 auto;
     padding: 1rem;
+    justify-self: center;
   }
 
 
   .interact-icon-nav {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    display: flex;
+    gap: 2rem;
   }
   .interact-icon-nav a {
     text-decoration: none;
     color: var(--main-text-color);
+    border: 2px solid var(--main-text-color);
+    padding: 1rem;
+    border-radius: 1rem;
   }
   .interact-icon-nav a:hover {
     color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    border-radius: 1rem;
     
   }
   .interact-h1, .interact-p {
@@ -422,6 +469,7 @@ hr {
     display: flex;
     gap: 100px;
     justify-content: space-between;
+    margin: 1rem;
   }
   .news-container nav a {
     padding: 5rem;
@@ -456,6 +504,10 @@ hr {
   .section-dialog {
     padding: 1rem;
     text-align: center;
+  }
+  .section-dialog:hover {
+    transform: scale(1.1, 1.1)
+    
   }
   .open-btn {
     padding: 0.5rem;
@@ -585,7 +637,7 @@ table input[type="text"] {
   color: var(--hover-bg-color);
   border-radius: 1rem;
 }
-.dialog-record-box {
+.dialog-record-box, .currency-dialog-box {
   position: absolute;
   top: 13rem;
   width: 50%;
@@ -641,7 +693,7 @@ table input[type="text"] {
 .bmi-instruction-p {
   text-align: center;
 }
-.record-li {
+.record-li, .rates-li {
   list-style: upper-roman;
   margin: 1rem;
   border:  2px solid var(--hover-color);
@@ -654,7 +706,137 @@ table input[type="text"] {
 .empty-record-par {
   text-align: center;
 }
+/*added styles for fav quote*/
+.quote-par {
+  font-weight: bolder;
+}
+.quote-author {
+  font-style: italic;
+}
+.fav-quote {
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid var(--hover-color);
+  border-radius: 1rem;
+}
+.fav-quote-heading {
+  margin-bottom: 1rem;
+  text-decoration:  5px var(--hover-color) underline;
+}
 
+/*Added styles for location*/
+.bms-location {
+  border: 2px solid var(--hover-color);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.bms-location iframe {
+  border-radius: 1rem;
+}
+
+/*Added styles for weather*/
+.current-weather, .weather-forecast, .current-location {
+  border: 2px solid var(--hover-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0 1rem 0;
+}
+.current-weather-heading, .forecast-heading, .current-location-heading {
+  text-align: center;
+  text-decoration: 5px var(--hover-color) underline;
+}
+.forecast-heading, .current-location-heading {
+  margin-bottom: 1rem;
+}
+.weather-data-values {
+  background-color: var(--main-text-color);
+  color: var(--hover-bg-color);
+}
+.weather-image {
+  display: block;
+  width: fit-content;
+  height: auto;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+.location-state {
+  text-align: center;
+}
+/*added styles to exchange button*/
+.exchange-button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+.exchange-button:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-color);
+}
+.curr-select, .curr-select-two {
+  width: 100%;
+  display: block;
+  font-size: 30px;
+  padding: 2px;
+  
+}
+.rate-amount {
+  width: 98%;
+  padding: 2px;
+  font-size: 30px;
+}
+.to-label {
+  display: block;
+  margin-top: 1rem;
+}
+.from-label{
+  display: block;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.output-error {
+  background-color: var(--main-text-color);
+  color: var(--hover-bg-color);
+}
+.close-button {
+  padding: 1rem;
+}
+
+/*Added styles to news*/
+.news-list {
+  border: 2px solid var(--hover-color);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  list-style: upper-roman;
+}
+.news-title, .news-author {
+  text-align: center;
+}
+.news-date {
+  text-align: right;
+}
+.news-author {
+  font-style: italic;
+}
+.news-title {
+  font-weight: bolder;
+}
+.news-desc {
+  padding: 1rem;
+}
+.news-link {
+  display: block;
+  text-align: center;
+}
+.news-link:hover {
+  color: var(--hover-color);
+}
+.news-search-container {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 1rem;
+}
 
   @keyframes lastVisited-animation {
     0% {
@@ -678,6 +860,72 @@ table input[type="text"] {
       transform: translateX(350px);
     }
   }
+  
   .last-visited {
     animation: lastVisited-animation 20s 2s infinite alternate linear;
+  }
+
+
+  @media screen and (max-width: 900px) {
+    .main-header {
+      position: unset;
+    }
+    #menu {display: block; font-size: 2.5rem;border: 2px solid;background: none;color: black;position: absolute;right: 1rem;top: 1.5rem;}
+    #menu:hover {border: 2px solid var(--hover-color);}
+    #menu::before {content: "☰";}
+    #menu.show::before {content: "X";}
+    #menu.show::before:hover {
+        border: 2px solid var(--hover-color);
+    }
+    .show a {display: block;}
+    
+    .header-nav a {display: none;}
+    
+    .show a {display: block;}
+    .header-nav {
+        flex-direction: column;width: 100%;
+    }
+    .last-visited {
+      animation: none;
+    }
+    .section-container {
+      display: block;
+    }
+    .side-nav {
+      display: none;
+    }
+    .footer-div {
+      grid-template-columns: 1fr;
+    }
+    .non-social {
+      margin-bottom: 1rem;
+    }
+    .courses-section {
+      padding: 1rem;
+    }
+    .about-img {
+      display: block;
+    }
+    .exchange-section {
+      margin-bottom: 1rem;
+    }
+    .weather-quotes-container aside {
+      margin-bottom: 1rem;
+    }
+    .bms-location {
+      border: none;
+    }
+    .news-container nav {
+      flex-direction: column;
+    }
+    #calcu input {
+      display: block;
+      max-width: 200px;
+    }
+    .contact-details form {
+      margin: 1rem;
+    }
+    .interact-icon-nav {
+      flex-direction: column;
+    }
   }

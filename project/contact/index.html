@@ -41,71 +41,176 @@
         <h2>Phone Number: 07064852404, 08110895912, 09162296367</h2>
       </div>
       <div class="contact-details">
-        <form action="enquiry.html" method="get">
-          <p>All required (*) fields must be filled</p>
-          <label class="name">
-            First Name <span class="required">*</span>
-            <input type="text" name="fname" id="fname" placeholder="John" autocomplete="on" required>
+        <form action="enquiry.html" method="get" class="form-container">
+          <h2>Enquiry/Join Form</h2>
+          <fieldset>
+              <legend>Biodata</legend>
+              <p class="form-heading">Required fields are marked with an asterics (<span class="required-fields" aria-label="required">*</span>)</p>
+              <p>
+                  <label for="firstname"> First Name: <span class="required-fields" aria-label="required">*</span>
+                      <input type="text" id="firstname" name="firstname" title="Your First Name" autocomplete="given-name" required>
+                  </label>
+              </p>
+              <p>
+                  <label for="lastname"> Last Name: <span class="required-fields" aria-label="required">*</span>
+                      <input type="text" id="lastname" name="lastname" title="Your Last Name" autocomplete="family-name" required>
+                  </label>
+              </p>
+              <p>
+                  <label for="email"> Email Address: <span class="required-fields" aria-label="required">*</span>
+                      <input type="email" name="email" id="email" title="Your Email address e.g johndoe@xyc.com" autocomplete="email" placeholder="johndoe@xyz.com" required>
+                  </label>
+              </p>
+              <p>
+                  <label for="telephone"> Mobile Phone Number: <span class="required-fields" aria-label="required">*</span>
+                      <input type="tel" name="telephone" id="telephone" title="Your Phone number" autocomplete="tel" placeholder="080xxxxxxxx" required>
+                  </label>
+              </p>
+              <p class="gender-p">
+                  Gender <span class="required-fields" aria-label="required">*</span>
+              </p>
+              <ul class="gender-ul">
+                  <li>
+                      <label for="male" class="gender-m">
+                          <input type="radio" name="gender" id="male" value="1" required>Male
+                      </label>
+                  </li>
+                  <li>
+                      <label for="female" class="gender-f">
+                          <input type="radio" name="gender" id="female" value="2" required>Female
+                      </label>
+                  </li>
+              </ul>
+              <p class="nationality-p">
+                  Nationality <span class="required-fields" aria-label="required">*</span>
+              </p>
+              <ul class="nationality-ul">
+                  <li>
+                      <label for="nigerian" class="nigerian">
+                          <input type="radio" name="nationality" id="nigerian" value="1" required>Nigerian
+                      </label>
+                  </li>
+                  <li>
+                      <label for="non-nigerian" class="non-nigerian">
+                          <input type="radio" name="nationality" id="non-nigerian" value="2" required>Non-Nigerian
+                      </label>
+                  </li>
+              </ul>
+              <p class="display-country" hidden>
+                  <label for="country">Country of Origin <span class="required-fields" aria-label="required">*</span>
+                      <input type="text" name="country" id="country" title="country" autofocus>
+                  </label>
+              </p>
+              <p class="select-p" hidden>State of Origin <span class="required-fields" aria-label="required">*</span></p>
+              <ul class="display-state" hidden>
+                  <li>
+                      <label for="select">
+                          <select name="state" id="select" required>
+                              <option value="" disabled selected>Please select your state</option>
+                          </select>
+                      </label>
+                  </li>
+              </ul>
+              <p>
+                  <label for="birth">Date of Birth <span class="required-fields" aria-label="required">*</span>
+                      <input type="date" name="birth" id="birth" required>
+                  </label>
+              </p>
+          </fieldset>
+          <fieldset>
+              <legend>Interest</legend>
+              <p class="interest">Are You joining us today or enquiring about something? <span class="required-fields" aria-label="required">*</span></p>
+              <ul class="interest-ul">
+                  <li>
+                      <label for="join" class="join">
+                          <input type="radio" name="interest" id="join" value="1" required>Join
+                      </label>
+                  </li>
+                  <li>
+                      <label for="enquire" class="enquire">
+                          <input type="radio" name="interest" id="enquire" value="2" required>Enquire
+                      </label>
+                  </li>
+              </ul>
+              <p class="display" hidden>
+                  <label for="gtitle"> Guardian's Title:
+                      <input type="text" id="gtitle" name="title" title="Minimum of 7 characters inluding only alpha characters, hyphens and spaces" autocomplete="organization-title" pattern="[a-zA-Z\s\-]*" minlength="2">
+                  </label>
+              </p>
+              <p class="display" hidden>
+                  <label for="gname"> Guardian's Full Name: <span class="required-fields" aria-label="required">*</span>
+                      <input type="text" id="gname" name="guardian" title="Guardian" autocomplete="organization">
+                  </label>
+              </p>
+              <p class="radio-par" hidden>When would you like to resume? <span class="required-fields" aria-label="required">*</span></p>
+              <ul class="display" id="guardian-ul" hidden>
+                  <li>
+                      <label for="resumption-one" class="resumption-one">
+                          <input type="radio" name="resumption" id="resumption-one" value="1">
+                          Immediately
+                      </label>
+                  </li>
+                  <li>
+                      <label for="resumption-two" class="resumption-two">
+                          <input type="radio" name="resumption" id="resumption-two" value="2">
+                          Soon
+                      </label>
+                  </li>
+                  <li>
+                      <label for="resumption-three" class="resumption-three">
+                          <input type="radio" name="resumption" id="resumption-three" value="3">
+                          Next Session
+                      </label>
+                  </li>
+                  <li>
+                      <label for="resumption-four" class="resumption-four">
+                          <input type="radio" name="resumption" id="resumption-four" value="4">
+                          Later
+                      </label>
+                  </li>
+              </ul>
+              <p class="enquiry-q" hidden>What would you like to enquire about?</p>
+              <ul class="display-q" hidden>
+                  <li>
+                      <label for="fees" class="fees">
+                          <input type="checkbox" name="fees" id="fees" value="1">
+                          Fees
+                      </label>
+                  </li>
+                  <li>
+                      <label for="enrol" class="enrol">
+                          <input type="checkbox" name="enrol" id="enrol" value="2">
+                          Enrollment
+                      </label>
+                  </li>
+                  <li>
+                      <label for="courses" class="course">
+                          <input type="checkbox" name="courses" id="courses" value="3">
+                          Courses Offered
+                      </label>
+                  </li>
+                  <li>
+                      <label for="others" class="others">
+                          <input type="checkbox" name="others" id="others" value="4">
+                          Others
+                      </label>
+                  </li>
+              </ul>
+              <p class="display-enquiry" hidden>
+                  <label for="enquiry-description">Enquiry Description:
+                      <textarea name="description" id="enquiry-description" title="Description of your Enquiry"></textarea>
+                  </label>
+              </p>
+              <p>
+                  <label>
+                      <input type="hidden" name="timestamp" id="timestamp" value="1">
+                  </label>
+              </p>
+          </fieldset>
+          <label class="submitbtn" for="submit-btn">
+              <input type="submit" value="Enquire/Join" id="submit-btn">
           </label>
-          <label class="name">
-            Last Name <span class="required">*</span>
-            <input type="text" name="lname" id="lname" placeholder="Doe" autocomplete="on" required>
-          </label>
-          <label class="email">
-            Email address <span class="required">*</span>
-            <input type="text" name="email" id="email" placeholder="johndoe@example.com" autocomplete="on" required>
-          </label>
-          <label class="phone">
-            Phone Number <span class="required">*</span>
-            <input type="tel" name="phone" id="phone" placeholder="+2347000608000" autocomplete="on" required>
-          </label>
-          <div>Gender
-          <label class="gender">
-            <input type="radio" name="gender" id="gender" value="1"> Male
-          </label>
-          <label class="gender">
-            <input type="radio" name="gender" id="gender1" value="2"> Female
-          </label>
-          <div class="nationality">Nationality <span class="required">*</span></div>
-          <label class="country">
-              <input type="radio" name="country" id="nat" value="1" required autocomplete="on"> Nigerian
-          </label>
-          <label class="country">
-              <input type="radio" name="country" id="nat2" value="2" required autocomplete="on"> Non-Nigerian
-          </label>
-          <label class="select">
-              State of Origin
-              <select name="state" id="state">
-                  <option value="" disabled selected>Please select your state</option>
-              </select>
-          </label>
-          <label class="birthDate">
-              Date of Birth <span class="required">*</span>
-              <input type="date" name="birthDate" id="birthDate" required>
-          </label>
-          <div class="enquiryy">What would you like to enquire about?<br><i>(Check all that apllies)</i></div>
-          <label class="check">
-            <input type="checkbox" name="enrol" id="enrol" value="1">Enrollment
-          </label>
-          <label class="check">
-              <input type="checkbox" name="fees" id="fees" value="2">Fees
-          </label>
-          <label class="check">
-              <input type="checkbox" name="duration" id="duration" value="3">Duration
-          </label>
-          <label class="check">
-              <input type="checkbox" name="courses" id="courses" value="4">Courses Offered
-          </label>
-          <label class="check">
-              <input type="checkbox" name="others" id="others" value="5">Others
-          </label>
-          <div class="enquiryy">If you selected "Others" above, kindly describe what you would like to enquire about below</div>
-          <label class="written">
-              Enquiry
-              <textarea name="user_review" id="user_review" autofocus></textarea>
-          </label>
-          <input type="submit" value="Enquire">
-        </form>
+      </form>
       </div>
       <hr>
       <div class="about-img">

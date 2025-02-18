@@ -2,9 +2,9 @@
 //conerts response to json
 export function convertToJson(res) {
     if (res.ok) {
-    return res.JSON();
+        return res.json();
     } else {
-    throw {name: "servicesError", message: res.JSON()};
+        throw {name: "servicesError", message: res.json()};
     }
 }
 
@@ -32,6 +32,13 @@ function renderWithTemplate(template, parentElement, position = "afterbegin") {
     renderWithTemplate(headerTemplate, header);
     renderWithTemplate(footerTemplate, footer);
     createLastMondificationAndCurrentYear();
+    const hamButton = document.querySelector("#menu");
+    const nav = document.querySelector(".header-nav");
+
+    hamButton.addEventListener("click", () => {
+        nav.classList.toggle("show");
+        hamButton.classList.toggle("show");
+    });
   }
   
   //fetches the path to the header/footer html and returns it in text
@@ -63,7 +70,7 @@ export function createLastMondificationAndCurrentYear() {
 
 
 
-
+//function to get and store the users last visited date
 export function lastVisistedDisplay() {
     const lastVisited = document.querySelector(".last-visited");
     const minute = 1000 * 60;
@@ -148,4 +155,14 @@ export function alertMessage(message, scroll=true) {
     const createdElement = document.createElement(element);
     createdElement.classList.add(className);
     return createdElement;
+}
+
+export function hamburgerMenu() {
+    const hamButton = document.querySelector("#menu");
+    const nav = document.querySelector(".header-nav");
+
+    hamButton.addEventListener("click", () => {
+        nav.classList.toggle("show");
+        hamButton.classList.toggle("show");
+    });
 }
