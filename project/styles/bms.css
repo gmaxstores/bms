@@ -40,8 +40,8 @@ body {
     text-align: center;
 }
 .non-social p a {
-  text-decoration: none;
-  color: var(--hover-color);
+  text-decoration: underline;
+  color: var(--main-text-color);
 }
 .non-social p a:hover {
   color: var(--main-text-color);
@@ -90,9 +90,17 @@ body {
   text-align: center;
   border-radius: 5rem;
   padding: 1rem 0 1rem 0;
-  background-color: var(--hover-bg-color);
+  background-color: var(--main-text-color);
+  color: var(--hover-bg-color);
   margin: 0 auto;
   font-style: italic;
+  height: 50px;
+}
+small a {
+  color: var(--main-text-color);
+}
+small a:hover {
+  color: var(--hover-color);
 }
 .welcome-img {
     width: 100%;
@@ -125,11 +133,14 @@ body {
     gap: 10px;
     margin: 0 auto;
     margin: 1rem;
+    height: fit-content
 }
 .section-container section {
     border: 2px solid var(--hover-color);
     border-radius: 20px;
     padding: 1rem;
+    
+    height: auto;
 }
 
 .weather-quotes-container {
@@ -273,7 +284,7 @@ hr {
     margin: 1rem;
     padding: 1rem;
     background-color: var(--hover-color);
-    font-size: 90%;
+    font-size: 1.5rem;
   }
 
   /*Added styles to form*/
@@ -326,6 +337,7 @@ hr {
     width: 20px;
     
   }
+  
   .nationality-ul {
     margin-left: 1rem;
     list-style: none;
@@ -431,12 +443,15 @@ textarea {
     max-width: fit-content;
   }
   .category-container {
-    padding: 1rem;
+    margin-top: 1rem;
     justify-self: center;
+    height: auto;
   }
-
-
+  .interact-main {
+    height: fit-content;
+  }
   .interact-icon-nav {
+    
     display: flex;
     gap: 2rem;
   }
@@ -546,6 +561,12 @@ textarea {
     padding: 3rem;
     font-size: 2rem;
     width: 100%;
+  }
+  .courses-menu a {
+    color: var(--main-text-color);
+  }
+  .courses-menu a:hover {
+    color: var(--hover-color);
   }
 
   /*added styles to the maths calculator*/
