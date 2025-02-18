@@ -10,20 +10,17 @@ divContainer.appendChild(newsUl);
 
 const options = {
     method: "GET",
-    mode: 'cors',
     headers: {
-      "X-Api-Key": "3221dc829a4844d79512864a08aa28dc",
-      'Access-Control-Allow-Origin': '*' 
-    },
-    
+      "access_key": "f5149708a0d4d5d742476e496dffa9cd"
+    }
 }
-const path = "https://newsapi.org/v2/top-headlines?sources=cnn";
+const path = "https://api.mediastack.com/v1/news?access_key=f5149708a0d4d5d742476e496dffa9cd&sources=en,-de&sources=cnn,-bbc";
 
 
 //function to dynamically create a list of news
 function displayNews (res, ul) {
     
-    res.articles.forEach(element => {
+    res.data.forEach(element => {
         const date = createElement("p", "news-date");
         const author = createElement("p", "news-author");
         const newsArticle = createElement("p", "news-article");
@@ -31,7 +28,7 @@ function displayNews (res, ul) {
         const desc = createElement("p", "news-desc");
         const newsLink = createElement("a", "news-link");
         const newsList = createElement("li", "news-list");
-        date.textContent = `${element.publishedAt}`;
+        date.textContent = `${element.published_at}`;
         author.textContent = `${element.author}`;
         newsArticle.textContent = `${element.content}`;
         title.textContent = `${element.title}`;
@@ -52,8 +49,9 @@ function displayNews (res, ul) {
 //function to fetch news and call displaynews function
 async function getNews() {
     try {
-        const response = await fetch(path, options);
+        const response = await fetch(path);
         const newsResponse = await convertToJson(response);
+        console.log(newsResponse)
         displayNews(newsResponse, newsUl);
     } catch (error) {
         const err = await error.message;
